@@ -2,13 +2,11 @@
 #define SELECTION_SORT_H
 
 #include <stddef.h>
-#include <spec_sort.h>
+#include "spec_sort.h"
 
 /*@ requires \valid_read(array + (begin .. end - 1));
     requires begin < end;
-
     assigns \nothing;
-
     ensures indexOfMinElement(array, begin, end, \result);
 */
 size_t index_of_min_element(int* array, size_t begin, size_t end);
@@ -18,8 +16,6 @@ size_t index_of_min_element(int* array, size_t begin, size_t end);
     ensures swap{Pre, Post}(p , q);
 */
 void swap(int* p, int* q);
-
-
 
 /*@ requires \valid(array + (begin .. end - 1));
     requires begin < end;
